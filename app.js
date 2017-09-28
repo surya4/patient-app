@@ -23,6 +23,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.use(express.json()); // to support JSON-encoded bodies
+// app.use(express.urlencoded()); // to support URL-encoded bodies
+
 app.use('/', index);
 app.use('/details', details);
 app.use('/done', done);
