@@ -5,26 +5,26 @@
         <% include ../partials/nav %>
             <div class="container">
                 <div class="jumbotron">
-                    <form action="/" method="post">
+                    <form action="/done" method="post">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="fname">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lname">
                         </div>
                         <div class="form-group">
                             <label for="age">Age</label>
-                            <input type="text" class="form-control" id="age" placeholder="Enter age">
+                            <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
                         </div>
                         <div class="form-group">
                             <label for="dob">Date Of Birth</label>
-                            <input type="text" class="form-control" id="dob" placeholder="Enter date of birth">
+                            <input type="text" class="form-control" id="dob" placeholder="Enter date of birth" name="dob">
                         </div>
                         <div class="form-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" name="gender">
                               Gender
                               <span class="caret"></span>
                             </button>
@@ -35,12 +35,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="dob">Phone</label>
-                            <input type="text" class="form-control" id="dob" placeholder="Enter phone number">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="dob" placeholder="Enter phone number" name="phone">
                         </div>
                         <div class="form-group">
                             <label for="comment">Free Text Information</label>
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" name="comments"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
