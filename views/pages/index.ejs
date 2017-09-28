@@ -3,7 +3,50 @@
 
     <body>
         <% include ../partials/nav %>
+            <div class="container">
+                <div class="jumbotron">
+                    <form action="/" method="post">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="text" class="form-control" id="age" placeholder="Enter age">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date Of Birth</label>
+                            <input type="text" class="form-control" id="dob" placeholder="Enter date of birth">
+                        </div>
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                              Gender
+                              <span class="caret"></span>
+                            </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Male</a></li>
+                                    <li><a href="#">Female</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Phone</label>
+                            <input type="text" class="form-control" id="dob" placeholder="Enter phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Free Text Information</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
 
+                </div>
+            </div>
             <% include ../partials/footer %>
                 <% include ../partials/scripts %>
 
