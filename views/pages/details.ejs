@@ -4,6 +4,59 @@
     <body>
         <% include ../partials/nav %>
 
+            <div class="container">
+                <div class="row">
+                    <p>
+                        <b>Patient Records</b>
+                    </p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Date Of Birth</th>
+                                <th>Gendre</th>
+                                <th>Phone No.</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=0; i < data.length; i++) { %>
+                                <tr>
+                                    <td>
+                                        <%= data[i].patient_id %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].first_name %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].last_name %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].age %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].date_of_birth %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].gender %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].phone_number %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].comments %>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
 
             </div>
             <% include ../partials/footer %>

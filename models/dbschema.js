@@ -8,5 +8,9 @@ var connection = mysql.createConnection({
     database: 'patient_app'
 });
 
+connection.connect((err) => {
+    if (err) throw err
+    console.log('You are now connected...')
+})
 
 module.exports = connection;
