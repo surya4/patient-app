@@ -2,15 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/dbschema');
 
-var s_num,
-    f_name,
-    l_name,
-    age,
-    dob,
-    gender,
-    ph_num,
-    comments;
-
 /* GET home page. */
 router.get('/', (req, res, next) => {
     try {
@@ -21,6 +12,7 @@ router.get('/', (req, res, next) => {
     }
 });
 
+// submit form data in db
 router.post('/done', (req, res, next) => {
     let data = req.body;
     let fname = data.fname,
@@ -46,45 +38,21 @@ router.post('/done', (req, res, next) => {
 /* GET users listing. */
 router.get('/details', function(req, res, next) {
     var query = " select * from patient_data";
-    // try {
-    db.query(query, (err, rows) => {
-        if (err) throw err;
-        let data = JSON.stringify(rows);
-        // let s_num = rows.patient_id,
-        //     f_name = rows.first_name,
-        //     l_name = rows.last_name,
-        //     age = rows.age,
-        //     dob = rows.date_of_birth,
-        //     gender = rows.gender,
-        //     ph_num = rows.phone_number,
-        //     comments = rows.comments;
-        console.log(data);
-
-        // // console.log(rows.phone_number);
-        // // console.log(ph_num);
-        // res.render('details', {
-        //     title: 'Patient App',
-        //     s_num: s_num,
-        //     f_name: f_name,
-        //     l_name: l_name,
-        //     age: age,
-        //     dob: dob,
-        //     gender: gender,
-        //     ph_num: ph_num,
-        //     comments: comments
-        // });
-        // console.log(data[2].s_num)
-        res.render('details', {
-            title: 'Patient App',
-            data: rows
+    try {
+        db.query(query, (err, rows) => {
+            if (err) throw err;
+            res.render('details', {
+                title: 'Patient App',
+                data: rows
+            });
         });
-    });
-    // } catch (e) {
-    //     console.log("Error : " + e);
-    //     return next(e);
-    // }
+    } catch (e) {
+        console.log("Error : " + e);
+        return next(e);
+    }
 });
 
+// Submit message redirect
 router.get('/done', (req, res, next) => {
     try {
         res.render('done', { title: 'Patient App' });
