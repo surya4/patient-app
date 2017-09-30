@@ -1,9 +1,9 @@
 var config = {
     db: {
         host: 'us-cdbr-iron-east-05.cleardb.net',
-        user: 'b9ccb46f94f3eb',
-        password: '6522e9ec',
-        db_name: 'heroku_0e44aee5ba8a740'
+        user: '*********',
+        password: '********',
+        db_name: '*********'
     },
     //server details
     default: {
