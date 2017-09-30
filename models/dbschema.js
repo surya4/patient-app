@@ -14,5 +14,6 @@ connection.connect((err) => {
 })
 
 connection.query('use ' + config.db.db_name);
+connection.query('alter table patient_data change date_of_birth Date VARCHAR(20)');
 
 module.exports = connection;

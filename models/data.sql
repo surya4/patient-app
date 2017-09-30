@@ -3,11 +3,13 @@ create table patient_data (
     first_name VARCHAR(20),
     last_name VARCHAR(20),
     age INT,
-    date_of_birth DATE,
+    date_of_birth VARCHAR(20),
     gender VARCHAR(20),
     phone_number BIGINT,
     comments VARCHAR(255)
 );
+
+alter table patient_data change date_of_birth Date VARCHAR(20);
 
 
 INSERT INTO patient_data(
