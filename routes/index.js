@@ -22,7 +22,6 @@ router.post('/done', (req, res, next) => {
         gender = data.gender,
         phone = Number(data.phone),
         comments = data.comments;
-    console.log(phone);
     var query = "INSERT INTO patient_data(first_name, last_name, age, date_of_birth,gender, phone_number, comments) VALUES('" + fname + "','" + lname + "'," + age + ",'" + dob + "','" + gender + "'," + phone + ",'" + comments + "')";
     try {
         console.log(query);
